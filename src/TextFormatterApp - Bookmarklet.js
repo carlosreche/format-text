@@ -15,7 +15,7 @@ javascript: ((
     fieldSelectors = [];
   }
 
-  const instanceKey = Symbol.for('FormatTextApp');
+  const instanceKey = Symbol.for('TextFormatterApp');
   if (window[instanceKey]) {
     window[instanceKey].run();
     return;
