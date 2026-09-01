@@ -127,8 +127,8 @@ javascript: ((
     .value {
       border: 1px solid hsl(213, 27%, 84%); border-radius: 8px; padding: 12px 14px;
       background: hsl(210, 40%, 98%); min-height: 44px; font-family: 'Fira Code', monospace;
-      color: hsl(215, 25%, 27%); word-break: break-word; font-size: 14px; line-height: 1.5;
-      transition: all 0.2s;
+      color: hsl(215, 25%, 27%); word-break: break-word; white-space: pre-wrap;
+      font-size: 14px; line-height: 1.5; transition: all 0.2s;
     }
     .value[contenteditable="true"] { background-color: hsl(0, 0%, 100%); cursor: text; }
     .value[contenteditable="true"]:focus { outline: none; border-color: hsl(217, 91%, 60%); box-shadow: 0 0 0 3px hsla(217, 91%, 60%, 0.15); }
@@ -408,7 +408,6 @@ javascript: ((
     const modeBtns = dialog.querySelectorAll('.btn-mode');
     const langFlags = dialog.querySelectorAll('.lang-flag');
 
-    /* FUNÇÃO CENTRALIZADA DE FECHAMENTO COM ANIMAÇÃO */
     const closeDialog = () => {
       if (dialog.classList.contains('closing')) return;
       dialog.classList.add('closing');
